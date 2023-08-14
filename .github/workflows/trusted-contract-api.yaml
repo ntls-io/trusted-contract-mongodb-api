@@ -25,7 +25,8 @@ jobs:
       - name: "Build container: trusted-contract-mongodb-api"
         uses: docker/build-push-action@v3
         with:
-          context: "https://github.com/${{ github.repository }}.git#${{ github.sha }}:trusted-contract-mongodb-api"
+          context: .
+          dockerfile: Dockerfile
           push: true
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}

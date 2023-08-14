@@ -6,7 +6,7 @@ RUN useradd user --create-home --uid 1000
 WORKDIR /var/app
 RUN chown user:user .
 
-COPY --chown=user . .
+COPY . /var/app
 
 USER user
 ENV PATH="/home/user/.local/bin:${PATH}"
