@@ -9,9 +9,10 @@ from odmantic import AIOEngine
 
 from src.common.settings import AppSettings
 from src.common.types import WalletAddress
-from src.data_service.operations.autofund import autofund_wallet
-from src.data_service.operations.transactionid import (check_transaction_id,
-                                                       save_transaction_id)
+from src.data_service.operations.transactionid import (
+    check_transaction_id,
+    save_transaction_id,
+)
 
 app_settings = AppSettings()
 mongo_client = AsyncIOMotorClient(app_settings.wallet_db_connection_string)
@@ -37,11 +38,6 @@ app.add_middleware(
 @app.get("/")
 async def main_route():
     return {"message": "Entry point of Trusted Contract API"}
-
-
-@app.post("/autofund", response_model=None, status_code=status.HTTP_200_OK)
-async def post_autofund_wallet(wallet_id: WalletAddress) -> None:
-    await autofund_wallet(wallet_id)
 
 
 @app.post("/transacionid/check", response_model=None, status_code=status.HTTP_200_OK)

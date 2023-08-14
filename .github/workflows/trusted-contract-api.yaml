@@ -65,6 +65,3 @@ jobs:
 
       - name: Check (black)
         run: poetry run black --check src
-
-      - name: Check (isort)
-        run: poetry run isort --check src

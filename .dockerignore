@@ -8,7 +8,6 @@
 !src/common/settings.py
 !src/common/types.py
 !src/data_service/__init__.py
-!src/data_service/operations/autofund.py
 !src/data_service/operations/transactionid.py
 !src/data_service/schema/actions.py
 !src/data_service/schema/entities.py
