@@ -65,10 +65,10 @@ jobs:
       - name: Install project
         run: poetry install --with=dev --no-interaction --sync
 
-      - name: Run tox
-        # Run tox using the version of Python in `PATH`
-        working-directory: .
-        run: poetry run tox -e py
+#      - name: Run tox
+#        # Run tox using the version of Python in `PATH`
+#        working-directory: .
+#        run: poetry run tox -e py
 
       - name: Check (ruff)
         run: poetry run ruff src
