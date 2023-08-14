@@ -59,10 +59,10 @@ jobs:
 
       - name: Install dependencies
         if: steps.cached-poetry-dependencies.outputs.cache-hit != 'true'
-        run: poetry install --with=dev --no-interaction --no-root --sync
+        run: poetry install --with=dev,test --no-interaction --no-root --sync
 
       - name: Install project
-        run: poetry install --with=dev --no-interaction --sync
+        run: poetry install --with=dev,test --no-interaction --sync
 
       - name: Run tox
         # Run tox using the version of Python in `PATH`
