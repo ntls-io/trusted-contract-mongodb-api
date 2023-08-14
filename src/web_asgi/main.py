@@ -10,7 +10,8 @@ from odmantic import AIOEngine
 from src.common.settings import AppSettings
 from src.common.types import WalletAddress
 from src.data_service.operations.autofund import autofund_wallet
-from src.data_service.operations.transactionid import check_transaction_id, save_transaction_id
+from src.data_service.operations.transactionid import (check_transaction_id,
+                                                       save_transaction_id)
 
 app_settings = AppSettings()
 mongo_client = AsyncIOMotorClient(app_settings.wallet_db_connection_string)
