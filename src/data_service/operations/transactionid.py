@@ -1,6 +1,3 @@
-from fastapi import HTTPException
-from odmantic import ObjectId
-
 from src.data_service.schema.actions import SaveTransactionId
 from src.data_service.schema.entities import TransactionId
 from src.data_service.schema.types import Engine
