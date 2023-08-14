@@ -67,6 +67,7 @@ jobs:
 
       - name: Run tox
         # Run tox using the version of Python in `PATH`
+        working-directory: .
         run: poetry run tox -e py
 
       - name: Check (ruff)
