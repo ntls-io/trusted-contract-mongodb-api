@@ -4,7 +4,7 @@ on: push
 
 defaults:
   run:
-    working-directory: trusted-contract-mongodb-api
+    working-directory: .
 
 jobs:
   build:
