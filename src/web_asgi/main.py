@@ -8,7 +8,6 @@ from motor.motor_asyncio import AsyncIOMotorClient
 from odmantic import AIOEngine
 
 from src.common.settings import AppSettings
-from src.common.types import WalletAddress
 from src.data_service.operations.transactionid import (
     check_transaction_id,
     save_transaction_id,
